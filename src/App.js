@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import info from './images/wedding_invitation_info.png';
+import photo from './images/wedding_invitation_photo.png';
+import { Swiper, SwiperSlide} from 'swiper/react';
+import { EffectFlip, Autoplay} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-flip';
+import 'swiper/css/autoplay';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Swiper
+          effect={'flip'}
+          grabCursor={true}
+          loop= {true}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: true,
+          }}
+          modules={[EffectFlip, Autoplay]}
+          className="mySwiper"
         >
-          Learn React
-        </a>
-      </header>
+          <SwiperSlide>
+            <img src={photo} className='card-side' alt="Wedding Couple Side" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={info} className='card-side' alt="Wedding Info Side" />
+          </SwiperSlide>
+        </Swiper>
     </div>
   );
 }
