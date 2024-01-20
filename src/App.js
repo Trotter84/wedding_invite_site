@@ -1,5 +1,5 @@
 import info from './images/wedding_invitation_info.png';
-import photo from './images/wedding_invitation_photo.png';
+import photo from './images/wedding_invitations.jpeg';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { EffectFlip, Autoplay} from 'swiper/modules';
 import 'swiper/css';
