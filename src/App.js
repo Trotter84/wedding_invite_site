@@ -1,5 +1,6 @@
 import info from './images/wedding_invitation_info.png';
 import photo from './images/wedding_invitations.jpeg';
+import Rsvp from './Rsvp.js';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { EffectFlip, Autoplay} from 'swiper/modules';
 import 'swiper/css';
@@ -29,6 +30,7 @@ function App() {
             <img src={info} className='card-side' alt="Wedding Info Side" />
           </SwiperSlide>
         </Swiper>
+        <Rsvp />
     </div>
   );
 }

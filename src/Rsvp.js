@@ -1,0 +1,43 @@
+import React, { Component } from 'react';
+import { Icon } from 'semantic-ui-react';
+import NetlifyForm from 'react-netlify-form';
+import './App.css';
+
+class Rsvp extends Component {
+    render() {
+        return(
+            <>
+                <NetlifyForm name="contact" method='POST' data-netlify="true">
+                    {({ loading, error, success }) => (
+                        <div>
+                            {loading &&
+                                <div className='status-txt'>Loading... <Icon loading name='spinner' /></div>
+                            }
+                            {error &&
+                                <div className='status-txt'>Your information was not sent. Please try again later.</div>
+                            }
+                            {success &&
+                                <div className='status-txt'>Thank you for contacting us!</div>
+                            }
+                            {!loading && !success &&
+                                <div className='rsvp-container'>
+                                    <p>
+                                        <label id='name' className='rsvp-txt'>Name Full<input className='rsvp-box' type="text" name="name" required /></label>
+                                    </p>
+                                    <p>
+                                        <label id='email' className='rsvp-txt'>Email <input className='rsvp-box' type="email" name="email" required /></label>
+                                    </p>
+                                    <p>
+                                        <button className='rsvp-btn' type="submit">RSVP</button>
+                                    </p>
+                                </div>
+                            }
+                        </div>
+                    )}
+                </NetlifyForm>
+            </>
+        )
+    }
+}
+
+export default Rsvp;
