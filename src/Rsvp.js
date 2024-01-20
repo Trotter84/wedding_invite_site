@@ -11,7 +11,7 @@ class Rsvp extends Component {
                     {({ loading, error, success }) => (
                         <div>
                             {loading &&
-                                <div className='status-txt'>Loading... <Icon loading name='spinner' /></div>
+                                <div className='status-txt'>Loading...</div>
                             }
                             {error &&
                                 <div className='status-txt'>Your information was not sent. Please try again later.</div>
