@@ -8,7 +8,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #181a1f;
-  height: 105vh;
+  height: 115vh;
 }
 
 .mySwiper {
@@ -41,9 +41,14 @@ body {
   background-color: #717e72;
   color: black;
   font-size: 1em;
+  max-height: 1.5em;
   border-radius: 5px;
   border-style: solid;
   border-color: #181a1f;
+}
+
+.rsvp-box.guest {
+  width: 2em;
 }
 
 .rsvp-btn {

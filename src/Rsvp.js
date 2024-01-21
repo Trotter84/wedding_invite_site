@@ -27,6 +27,9 @@ class Rsvp extends Component {
                                     <label id='email' className='rsvp-txt'>Email <input className='rsvp-box' type="email" name="email" required /></label>
                                 </p>
                                 <p>
+                                    <label id='quantity' className='rsvp-txt'>Number Attending<textarea className='rsvp-box guest' type="number" name="quantity" min="1" required /></label>
+                                </p>
+                                <p>
                                     <button className='rsvp-btn' type="submit">RSVP</button>
                                 </p>
                             </div>
