@@ -6,7 +6,19 @@ import './App.css';
 class Rsvp extends Component {
     render() {
         return(
-            <form name="contact" method='POST' data-netlify="true">
+            <NetlifyForm name="contact" method='POST' data-netlify="true">
+                {({ loading, error, success }) => (
+                    <div>
+                        {loading &&
+                            <div className='status-txt'>Loading...</div>
+                        }
+                        {error &&
+                            <div className='status-txt'>Your information was not sent. Please try again later.</div>
+                        }
+                        {success &&
+                            <div className='status-txt'>Thank you for contacting us!</div>
+                        }
+                        {!loading && !success &&
                             <div className='rsvp-container'>
                                 <p>
                                     <label id='name' className='rsvp-txt'>Name Full<input className='rsvp-box' type="text" name="name" required /></label>
@@ -18,8 +30,10 @@ class Rsvp extends Component {
                                     <button className='rsvp-btn' type="submit">RSVP</button>
                                 </p>
                             </div>
-                 
-            </form>
+                        }
+                    </div>
+                )}
+            </NetlifyForm>
 
         )
     }
