@@ -8,7 +8,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #181a1f;
-  height: 120vh;
+  height: 130vh;
 }
 
 .mySwiper {
@@ -31,6 +31,9 @@ body {
 }
 
 .rsvp-txt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   color: antiquewhite;
   font-family: 'Sevillana', cursive;
   font-size: 1.7em;
@@ -48,6 +51,7 @@ body {
 }
 
 .rsvp-box.guest {
+  align-self: center;
   width: 2em;
 }
 
