@@ -27,6 +27,11 @@
     <title>Daniel and Ellie Trotter</title>
   </head>
   <body>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text"  name="name">
+      <input type="email" name="email">
+      <button type="submit">Send</button>
+    </form>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,10 +44,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <form name="Contact" method="POST" data-netlify="true" hidden>
-      <input type="text" id="name" name="name" required />
-      <input type="email" id="email" name="email" placeholder="example@domain.com" required />
-      <button type="submit">Send</button>
-    </form>
   </body>
 </html>
