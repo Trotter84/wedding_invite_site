@@ -7,16 +7,17 @@ class Rsvp extends Component {
     render() {
         return(
             <NetlifyForm name="contact" method='POST' data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 {({ loading, error, success }) => (
                     <div>
                         {loading &&
                             <div className='status-txt'>Loading...</div>
                         }
                         {error &&
-                            <div className='status-txt'>Your information was not sent. Please try again later.</div>
+                            <div className='status-txt'>There was an error. Please try again later.</div>
                         }
                         {success &&
-                            <div className='status-txt'>Thank you for contacting us!</div>
+                            <div className='status-txt'>Thank you for your RSVP!</div>
                         }
                         {!loading && !success &&
                             <div className='rsvp-container'>
