@@ -7,7 +7,6 @@ class Rsvp extends Component {
     render() {
         return(
             <NetlifyForm name="contact" method='POST' data-netlify="true">
-                <input type="hidden" name="form-name" value="contact" />
                 {({ loading, error, success }) => (
                     <div>
                         {loading &&
