@@ -21,7 +21,7 @@ class Rsvp extends Component {
                         {!loading && !success &&
                             <div className='rsvp-container'>
                                 <p>
-                                    <label id='name' className='rsvp-txt'>Name Full<input className='rsvp-box' type="text" name="name" required /></label>
+                                    <label id='name' className='rsvp-txt'>Full Name<input className='rsvp-box' type="text" name="name" required /></label>
                                 </p>
                                 <p>
                                     <label id='email' className='rsvp-txt'>Email <input className='rsvp-box' type="email" name="email" required /></label>
