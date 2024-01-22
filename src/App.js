@@ -17,7 +17,7 @@ function App() {
           grabCursor={true}
           loop= {true}
           autoplay={{
-            delay: 6000,
+            delay: 4000,
             disableOnInteraction: true,
           }}
           modules={[EffectFlip, Autoplay]}
